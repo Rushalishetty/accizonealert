@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <center>
+      <h1>PREDICTION:</h1>
+      <p id='p1'></p>
+      <p id='p2'></p>
+      <a href="/" id="go"></a>
+    </center>
+    <script>
+    {%if data<=102%}
+    document.getElementById('p1').innerHTML="Accident zone";
+    play();
+    {%else%}
+    document.getElementById('p1').innerHTML="Not Accident zone";
+    {%endif%}
+
+    function play() {
+       var beepsound = new Audio(
+'https://media.geeksforgeeks.org/wp-content/uploads/20190531135120/beep.mp3');
+          beepsound.play();
+   }
+        setInterval(function(){
+          document.getElementById('go').click();
+        }, 6000);
+
+    </script>
+  </body>
+</html>
